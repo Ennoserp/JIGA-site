@@ -3,27 +3,20 @@
 Template Name: Carte
 */
 
-?><!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <title>Carte des poteaux</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1.0" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" rel="stylesheet" />
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-        <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
-        <style>
-            html, body{
-                height: 100%;
-            }
-        </style>
-    </head>
-    <body class="">
+get_header();
 
-        <!--<h1>Carte des lampadaires de la ville</h1>-->
+?>
 
-        <div id='map' style='width: 100%; height: 100%;'></div>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Carte des lampadaires</h1>
+  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Exporter les données</a>
+</div>
+
+        <div id='map' style='width: 100%; height: 700px;'></div>
 
         <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiYXJuYXVka3N0dWQiLCJhIjoiY2sxbm1xeHdiMGM3NzNjcWtzZHhuY3g0NCJ9.414u70WFpax7al_AuexSQQ';
@@ -118,5 +111,11 @@ Template Name: Carte
         });
         </script>
 
-    </body>
-</html>
+        <!-- /.container-fluid -->
+
+  </div>
+  <!-- End of Main Content -->
+
+<?php
+
+get_footer();
