@@ -3,6 +3,10 @@
 Template Name: Carte
 */
 
+if( ! is_user_logged_in() ) {
+    wp_redirect( get_home_url() );
+}
+
 get_header();
 
 ?>

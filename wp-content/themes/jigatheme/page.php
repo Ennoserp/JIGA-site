@@ -12,8 +12,14 @@ get_header();
   <h1 class="h3 mb-0 text-gray-800"><?php echo get_the_title(); ?></h1>
 </div>
 
-<?php echo the_content(); ?>
-
+<?php 
+if ( have_posts() ) {
+	while ( have_posts() ) {
+        the_post();
+        the_content();
+	}
+}
+?>
 
 </div>
   <!-- End of Main Content -->

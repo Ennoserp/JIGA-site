@@ -22,7 +22,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-lightbulb"></i>
         </div>
@@ -33,11 +33,11 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <!--<li class="nav-item active">
         <a class="nav-link" href="index.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Tableau de bord</span></a>
-    </li>
+    </li>-->
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -48,7 +48,7 @@
     </div>
 
     <!-- Nav Item - Charts -->
-    <li class="nav-item">
+    <li class="nav-item <?php echo $wp->request == 'carte' ? 'active' : ''; ?>">
         <a class="nav-link" href="/carte/">
         <i class="fas fa-fw fa-map"></i>
         <span>Carte des lampadaires</span></a>
@@ -63,7 +63,7 @@
     </div>
 
     <!-- Nav Item - Charts -->
-    <li class="nav-item">
+    <li class="nav-item <?php echo $wp->request == 'stats' ? 'active' : ''; ?>">
         <a class="nav-link" href="/stats/">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>Statistiques</span></a>
