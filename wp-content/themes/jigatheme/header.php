@@ -18,8 +18,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-    <?php if( is_user_logged_in() ) : ?>
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -32,7 +30,7 @@
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider">
 
     <!-- Nav Item - Dashboard -->
     <!--<li class="nav-item active">
@@ -41,8 +39,35 @@
         <span>Tableau de bord</span></a>
     </li>-->
 
+    <div class="sidebar-heading">
+        Présentation 
+    </div>
+
+    <!-- Nav Item - Charts -->
+    <li class="nav-item <?php echo $wp->request == 'optimisation-trafic' ? 'active' : ''; ?>">
+        <a class="nav-link" href="/optimisation-trafic/">
+        <i class="fas fa-fw fa-traffic-light"></i>
+        <span>Optimisation du trafic routier</span></a>
+    </li>
+
+    <!-- Nav Item - Charts -->
+    <li class="nav-item <?php echo $wp->request == 'qualite-air' ? 'active' : ''; ?>">
+        <a class="nav-link" href="/qualite-air/">
+        <i class="fas fa-fw fa-wind"></i>
+        <span>Qualité de l'air</span></a>
+    </li>
+
+    <!-- Nav Item - Charts -->
+    <li class="nav-item <?php echo $wp->request == 'team' ? 'active' : ''; ?>">
+        <a class="nav-link" href="/team/">
+        <i class="fas fa-fw fa-users"></i>
+        <span>Notre équipe</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider">
+
+    <?php if( is_user_logged_in() ) : ?>
 
     <!-- Heading -->
     <div class="sidebar-heading">
@@ -74,6 +99,8 @@
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
+    <?php endif ; ?>
+
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -82,7 +109,7 @@
     </ul>
     <!-- End of Sidebar -->
 
-    <?php endif ; ?>
+    
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">

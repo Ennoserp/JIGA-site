@@ -8,3 +8,13 @@ Version: 1.0
 html, body{
     height: 100%;
 }
+
+.sidebar{
+    position: fixed;
+    overflow: auto;
+    z-index: 9
+}
+
+#content-wrapper{
+    padding-left: 224px;
+}

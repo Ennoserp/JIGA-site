@@ -27,14 +27,14 @@ get_header();
         var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [ 3.083156, 45.773540 ],
-        zoom: 19
+        center: [ 3.086290380287169, 45.77695487061216 ],
+        zoom: 16
         });
         
         map.on('load', function() {
         map.addSource("earthquakes", {
         type: "geojson",
-        data: "<?php echo get_template_directory_uri(); ?>/points.json",
+        data: "<?php echo get_site_url(); ?>/api/",
         cluster: true,
         clusterMaxZoom: 16,
         clusterRadius: 50
