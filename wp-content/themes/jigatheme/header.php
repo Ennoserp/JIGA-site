@@ -18,6 +18,8 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+    <?php if( is_user_logged_in() ) : ?>
+
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -80,6 +82,8 @@
     </ul>
     <!-- End of Sidebar -->
 
+    <?php endif ; ?>
+
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -99,7 +103,7 @@
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
 
-            
+            <?php if( is_user_logged_in() ) : ?>
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
@@ -109,7 +113,7 @@
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/wp-admin/profile.php">
                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                 Profil
                 </a>
@@ -120,6 +124,16 @@
                 </a>
             </div>
             </li>
+
+            <?php else : ?>
+
+            <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="/wp-admin/" >
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Connexion</span>
+            </a>
+            </li>
+
+            <?php endif ; ?>
 
         </ul>
 
